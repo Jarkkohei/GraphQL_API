@@ -18,8 +18,22 @@ cd GraphQL_API
 npm install
 ```
 
-## Run
+Add `config.js` -file into the projects root folder and copy the following code into it.
+
+If you're using Git, remember to add the `config.js` -file into `.gitignore` -file.
+
+```javascript
+module.exports = {
+    MONGODB: '<YOUR-MONGODB-CONNECTION-STRING-HERE>'
+}
+```
+
+Replace the `<YOUR-MONGODB-CONNECTION-STRING-HERE>` with our MongdDB Atlas connection string.
+
+Remember also to replace the `<password>` in the connection string with your MongoDB Atlas Cluster password.
+
+## Run the server
 
 ```bash
-npm start
+node index
 ```
