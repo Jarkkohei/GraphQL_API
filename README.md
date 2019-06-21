@@ -30,7 +30,7 @@ module.exports = {
 
 Replace the `<YOUR-MONGODB-CONNECTION-STRING-HERE>` with our MongdDB Atlas connection string.
 
-Remember also to replace the `<password>` in the connection string with your MongoDB Atlas Cluster password.
+Remember also to replace the `<password>` in the connection string with your MongoDB Atlas Cluster password and the word `test` with your MongoDB Atlas database name.
 
 ## Run the server
 
