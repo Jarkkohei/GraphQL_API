@@ -23,4 +23,4 @@ const postSchema = new Schema({
     }
 });
 
-modula.exports = model('Post', postSchema);
+module.exports = model('Post', postSchema);
