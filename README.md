@@ -36,7 +36,7 @@ Remember also to replace the `<password>` in the connection string with your Mon
 ## Run the server
 
 ```bash
-node index
+npm start
 ```
 
 Navigate to [localhost:5000](https://localhost:5000 "GraphQL Playground") to see the GraphQL Playground
