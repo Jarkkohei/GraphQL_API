@@ -24,11 +24,12 @@ If you're using Git, remember to add the `config.js` -file into `.gitignore` -fi
 
 ```javascript
 module.exports = {
-    MONGODB: '<YOUR-MONGODB-CONNECTION-STRING-HERE>'
+    MONGODB: '<YOUR_MONGODB_CONNECTIO_STRING_HERE>',
+    JWT_SECRET_KEY: '<YOUR_SECRET_KEY_HERE>'
 }
 ```
 
-Replace the `<YOUR-MONGODB-CONNECTION-STRING-HERE>` with our MongdDB Atlas connection string.
+Replace the `<YOUR-MONGODB-CONNECTION-STRING-HERE>` with our MongdDB Atlas connection string and the `<YOUR_SECRET_KEY_HERE>` with your JWT secret key of your choice.
 
 Remember also to replace the `<password>` in the connection string with your MongoDB Atlas Cluster password and the word `test` with your MongoDB Atlas database name.
 
