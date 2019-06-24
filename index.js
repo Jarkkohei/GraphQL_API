@@ -2,22 +2,10 @@ const { ApolloServer } = require('apollo-server');
 const gql = require('graphql-tag');
 const mongoose = require('mongoose');
 
+const typeDefs = require('./graphql/typeDefs.js');
 const Post = require('./models/Post.js');
 
 const { MONGODB } = require('./config.js');
-
-const typeDefs = gql`
-    type Post{
-        id: ID!
-        body: String!
-        created_at: String!
-        username: String
-    }
-
-    type Query{
-        getPosts: [Post]
-    }
-`;
 
 const resolvers = {
     Query: {
