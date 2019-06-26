@@ -35,8 +35,18 @@ Remember also to replace the `<password>` in the connection string with your Mon
 
 ## Run the server
 
+Run server with nodemon
 ```bash
 npm start
 ```
 
+Run server without nodemon
+```bash
+npm run serve
+```
+
 Navigate to [localhost:5000](https://localhost:5000 "GraphQL Playground") to see the GraphQL Playground
+
+---
+
+See the `client/README.md` -file for client-side instructions.
