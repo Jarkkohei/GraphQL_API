@@ -1,3 +1,33 @@
+# Social Media App
+
+Client-side app to be used with the GraphQL_API
+
+---
+
+## Install
+
+Change into `client` directory
+```bash
+cd client
+```
+
+Install npm dependencies
+```bash
+npm install
+```
+
+---
+
+## Run
+
+Run the client-side app in development mode.
+```bash
+npm start
+```
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
