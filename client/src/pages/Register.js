@@ -19,7 +19,7 @@ function Register(props) {
     }
 
     const [addUser, { loading }] = useMutation(REGISTER_USER, {
-        update(proxy, result) {
+        update(_, result) {
             console.log(result);
             props.history.push('/');
         },
