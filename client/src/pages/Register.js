@@ -23,8 +23,8 @@ function Register(props) {
             console.log(result);
         },
         onError(err) {
-            console.log(err.graphQLErrors[0].extensions.ecxeption.errors);
-            setError(err.graphQLErrors[0].extensions.ecxeption.errors);
+            console.log(err.graphQLErrors[0].extensions.exception.errors);
+            setError(err.graphQLErrors[0].extensions.exception.errors);
         },
         variables: values
     });
