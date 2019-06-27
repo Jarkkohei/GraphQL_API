@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Icon, Label, Image } from 'semantic-ui-react';
+import { Card, Icon, Label, Image, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
@@ -14,7 +14,14 @@ function PostCard({ post: { id, body, created_at, username, likeCount, commentCo
                 <Card.Description>{body}</Card.Description>
             </Card.Content>
             <Card.Content extra>
-               <p>Buttons here</p>
+                <Button as='div' labelPosition='right'>
+                    <Button color='blue' basic>
+                        <Icon name='heart' />
+                    </Button>
+                        <Label basic color='blue' pointing='left'>
+                            {likeCount}
+                    </Label>
+                </Button>
             </Card.Content>
         </Card>
     )
