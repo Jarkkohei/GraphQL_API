@@ -36,6 +36,7 @@ function Register() {
                     label="Username"
                     placeholder="Username..."
                     name="username"
+                    type="text"
                     value={values.username}
                     onChange={onChange}
                 />
@@ -43,6 +44,7 @@ function Register() {
                     label="Email"
                     placeholder="Email..."
                     name="email"
+                    type="email"
                     value={values.email}
                     onChange={onChange}
                 />
@@ -50,6 +52,7 @@ function Register() {
                     label="Password"
                     placeholder="Password..."
                     name="password"
+                    type="password"
                     value={values.password}
                     onChange={onChange}
                 />
@@ -57,6 +60,7 @@ function Register() {
                     label="Confirm Password"
                     placeholder="Confirm Password..."
                     name="confirmPassword"
+                    type="password"
                     value={values.confirmPassword}
                     onChange={onChange}
                 />
