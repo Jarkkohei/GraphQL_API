@@ -3,7 +3,7 @@ import { Form, Button } from 'semantic-ui-react';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 
-function Register() {
+function Register(props) {
     
     const [errors, setError] = useState({});
 
