@@ -3,7 +3,9 @@ import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 import { Grid, Image, Card, Button, Icon, Label } from 'semantic-ui-react';
 import moment from 'moment';
+
 import LikeButton from '../components/LikeButton';
+import DeleteButton from '../components/DeleteButton';
 
 import { AuthContext } from '../context/auth';
 
@@ -52,6 +54,9 @@ function SinglePost(props) {
                                        {commentCount}
                                    </Label>
                                </Button>
+                               {user && user.username === username && (
+                                   <DeleteButton postId={id} />
+                               )}
                            </Card.Content>
                        </Card>
                     </Grid.Column>
