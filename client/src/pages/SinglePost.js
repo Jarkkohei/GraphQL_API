@@ -61,9 +61,7 @@ function SinglePost(props) {
     }
 
     return (
-        <>
-            {postMarkup}
-        </>
+        postMarkup
     )
 }
 
