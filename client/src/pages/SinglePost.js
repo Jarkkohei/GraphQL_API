@@ -60,9 +60,7 @@ function SinglePost(props) {
         );
     }
 
-    return (
-        postMarkup
-    )
+    return postMarkup;
 }
 
 const FETCH_POST_QUERY = gql`
