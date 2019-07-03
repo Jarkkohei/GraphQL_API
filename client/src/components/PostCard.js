@@ -9,10 +9,6 @@ function PostCard({ post: { id, body, created_at, username, likeCount, commentCo
         console.log('likePost');
     }
 
-    function commentOnPost() {
-        console.log('commentOnPost');
-    }
-
     return (
         <Card fluid>
             <Card.Content>
@@ -30,7 +26,7 @@ function PostCard({ post: { id, body, created_at, username, likeCount, commentCo
                             {likeCount}
                     </Label>
                 </Button>
-                <Button as='div' labelPosition='right' onClick={commentOnPost}>
+                <Button as='div' labelPosition='right' as={Link} to={`/posts/${id}`}>
                     <Button color='teal' basic>
                         <Icon name='comments' />
                     </Button>
