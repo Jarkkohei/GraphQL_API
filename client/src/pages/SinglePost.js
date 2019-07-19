@@ -75,6 +75,30 @@ function SinglePost(props) {
                                 )}
                             </Card.Content>
                         </Card>
+                        {user && (
+                            <Card fluid>
+                                <Card.Content>
+                                    <p>Post a Comment</p>
+                                    <Form>
+                                        <div className="ui action input fluid">
+                                            <input
+                                                type="text"
+                                                placeholder="Comment..."
+                                                name="comment"
+                                                value={comment}
+                                                onChange={event => setComment(event.target.value)}
+                                            />
+                                            <button
+                                                type="submit"
+                                                className="ui button teal"
+                                                disabled={comment.trim() === ''}
+                                                onClick={submitComment}
+                                            >Submit</button>
+                                        </div>
+                                    </Form>
+                                </Card.Content>
+                            </Card>
+                        )}
                         {comments.map(comment => (
                             <Card fluid key={comment.id}>
                                 <Card.Content>
