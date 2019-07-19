@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import gql from 'graphql-tag';
-import { useQuery } from '@apollo/react-hooks';
-import { Grid, Image, Card, Button, Icon, Label } from 'semantic-ui-react';
+import { useQuery, useMutation } from '@apollo/react-hooks';
+import { Grid, Form, Image, Card, Button, Icon, Label } from 'semantic-ui-react';
 import moment from 'moment';
 
 import LikeButton from '../components/LikeButton';
@@ -15,9 +15,21 @@ function SinglePost(props) {
 
     const { user } = useContext(AuthContext);
 
+    const [comment, setComment] = useState('');
+
     const { data: { getPost } } = useQuery(FETCH_POST_QUERY, {
         variables: {
             postId
+        }
+    });
+
+    const [submitComment] = useMutation(SUBMIT_COMMENT_MUTATION, {
+        update() {
+            setComment('');
+        },
+        variables: {
+            postId,
+            body: comment
         }
     });
 
@@ -83,6 +95,21 @@ function SinglePost(props) {
 
     return postMarkup;
 }
+
+const SUBMIT_COMMENT_MUTATION = gql`
+    mutation($postId: ID!, $body: String!) {
+        createComment(postId: $postId, body: $body) {
+            id
+            comments {
+                id
+                body
+                created_at
+                username
+            }
+            commentCount
+        }
+    }
+`;
 
 const FETCH_POST_QUERY = gql`
     query($postId: ID!) {
