@@ -20,7 +20,7 @@ function DeleteButton({ postId, callback }) {
             data.getPosts = data.getPosts.filter(p => p.id !== postId);
             proxy.writeQuery({ query: FETCH_POSTS_QUERY, data });
 
-            if(callback) callback();
+            if (callback) callback();
         },
         variables: {
             postId
@@ -29,16 +29,16 @@ function DeleteButton({ postId, callback }) {
 
     return (
         <>
-            <Button 
-                as="div" 
-                color="red" 
-                floated="right" 
+            <Button
+                as="div"
+                color="red"
+                floated="right"
                 onClick={() => setConfirmOpen(true)}>
                 <Icon name="trash" style={{ margin: 0 }}></Icon>
             </Button>
-            <Confirm 
-                open={confirmOpen} 
-                onCancel={() => setConfirmOpen(false)} 
+            <Confirm
+                open={confirmOpen}
+                onCancel={() => setConfirmOpen(false)}
                 onConfirm={deletePost}
             />
         </>
